@@ -1,0 +1,38 @@
+_target_: src.models.cifar10_module.CIFAR10LitModule
+
+optimizer:
+  _target_: torch.optim.Adam
+  _partial_: true
+  lr: 0.0003
+  weight_decay: 0.000001
+
+scheduler:
+  _target_: torch.optim.lr_scheduler.ReduceLROnPlateau
+  _partial_: true
+  mode: min
+  factor: 0.1
+  patience: 10
+
+# scheduler:
+#   _target_: torch.optim.lr_scheduler.MultiStepLR ##torch.optim.lr_scheduler.ReduceLROnPlateau
+#   _partial_: true
+#   gamma: 0.1
+#   milestones: [100, 150]
+
+
+
+net:
+  _target_: src.models.components.vision_transformer.VisionTransformer
+  embed_dim: 768 ##512
+  hidden_dim: 3072 ##1024
+  num_channels: 3
+  num_heads: 16
+  num_layers: 24
+  num_classes: 10
+  patch_size: 4
+  num_patches: 64
+  device: ${trainer.accelerator}
+  dropout : 0.1
+
+# compile model for faster training with pytorch 2.0
+compile: false

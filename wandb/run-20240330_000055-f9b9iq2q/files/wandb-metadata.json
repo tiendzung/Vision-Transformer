@@ -1,0 +1,36 @@
+{
+    "os": "macOS-13.4.1-arm64-arm-64bit",
+    "python": "3.8.18",
+    "heartbeatAt": "2024-03-29T17:00:56.305701",
+    "startedAt": "2024-03-29T17:00:55.360864",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/Users/tiendzung/Project/ViT-demo-clone/train.py",
+    "codePathLocal": null,
+    "git": {
+        "remote": "git@github.com:tiendzung/Vision-Transformers.git",
+        "commit": "538ff666f44cd95a5397177dfab01ad5d7782e2f"
+    },
+    "email": "tiendung050803@gmail.com",
+    "root": "/Users/tiendzung/Project/ViT-demo",
+    "host": "192.168.1.44",
+    "username": "tiendzung",
+    "executable": "/Users/tiendzung/anaconda3/envs/vit/bin/python",
+    "cpu_count": 10,
+    "cpu_count_logical": 10,
+    "disk": {
+        "/": {
+            "total": 926.3517189025879,
+            "used": 11.17892837524414
+        }
+    },
+    "gpuapple": {
+        "type": "arm",
+        "vendor": "Apple"
+    },
+    "memory": {
+        "total": 16.0
+    }
+}
